@@ -1,6 +1,6 @@
 # PT Super App Test
-
-### List of Routes
+This is a coding test for a company recruitment
+## List of Routes
 
 ### Product
 ### GET /products
