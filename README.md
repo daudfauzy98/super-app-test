@@ -2,8 +2,8 @@
 
 ## Routes
 ### Product
-#### GET /products
-##### Response
+### GET /products
+#### Response
 ```javascript
 {
     "data": [
@@ -27,10 +27,10 @@
 }
 ```
 
-#### GET /product/:id
-##### Request
+### GET /product/:id
+#### Request
 * Path param __id__ (product)
-##### Response
+#### Response
 ```javascript
 {
     "data": {
@@ -45,8 +45,8 @@
 }
 ```
 
-#### POST /product
-##### Request
+### POST /product
+#### Request
 ```javascript
 {
     "name": "Pepsodent Sparkling Mint",
@@ -60,7 +60,7 @@
     ]
 }
 ```
-##### Response
+#### Response
 ```javascript
 {
     "data": {
@@ -83,11 +83,11 @@
 }
 ```
 
-### Stock
-#### GET /stock/:id
-##### Request
+## Stock
+### GET /stock/:id
+#### Request
 * Path param __id__ (product)
-##### Response
+#### Response
 ```javascript
 {
     "data": [
@@ -110,11 +110,11 @@
     "message": "success"
 }
 ```
-#### PUT /stock/:id
-##### Request
+### PUT /stock/:id
+#### Request
 * Path param __id__ (stock)
 * Query param __count__
-##### Response
+#### Response
 ```javascript
 {
     "error": false,
@@ -122,12 +122,12 @@
 }
 ```
 
-### Background Process
-#### /order/:id
-##### Request
+## Background Process
+### /order/:id
+#### Request
 * Path param __id__ (product)
 * Query param __order__
-##### Response
+#### Response
 ```javascript
 {
     "error": false,
