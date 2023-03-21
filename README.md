@@ -1,5 +1,5 @@
 # PT Super App Test
-This is a coding test for a company recruitment
+This is a coding test for a company recruitment. This project is using PostgreSQL. I have put a migration and seeder in the `main.go` so it will do the job every time you running the project.
 
 ## List of Routes
 
