@@ -24,7 +24,8 @@
     ],
     "error": false,
     "message": "success"
-}```
+}
+```
 
 #### GET /product/:id
 ##### Request
@@ -41,7 +42,8 @@
     },
     "error": false,
     "message": "success"
-}```
+}
+```
 
 #### POST /product
 ##### Request
@@ -56,7 +58,8 @@
             "count": 30
         }
     ]
-}```
+}
+```
 ##### Response
 ```javascript
 {
@@ -77,7 +80,8 @@
     },
     "error": false,
     "message": "success"
-}```
+}
+```
 
 ### Stock
 #### GET /stock/:id
@@ -104,7 +108,8 @@
     ],
     "error": false,
     "message": "success"
-}```
+}
+```
 #### PUT /stock/:id
 ##### Request
 * Path param __id__ (stock)
@@ -114,7 +119,8 @@
 {
     "error": false,
     "message": "success"
-}```
+}
+```
 
 ### Background Process
 #### /order/:id
@@ -126,4 +132,5 @@
 {
     "error": false,
     "message": "success"
-}```
+}
+```
