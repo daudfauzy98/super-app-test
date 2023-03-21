@@ -124,7 +124,7 @@
 ```
 
 ## Background Process
-### /order/:id
+### PUT /order/:id
 #### Request
 * Path param __id__ (product)
 * Query param __order__
