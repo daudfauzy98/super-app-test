@@ -7,6 +7,7 @@ import (
 	"stock-management/entity"
 
 	"github.com/gin-gonic/gin"
+	"github.com/google/uuid"
 )
 
 // API: /products
@@ -102,5 +103,41 @@ func GetProduct(ctx *gin.Context) {
 		"error":   false,
 		"message": "success",
 		"data":    response,
+	})
+}
+
+func AddProduct(ctx *gin.Context) {
+	var newProduct *entity.Product
+	err := ctx.BindJSON(&newProduct)
+	if err != nil {
+		log.Println(err)
+		ctx.JSON(400, gin.H{
+			"error":   true,
+			"message": err.Error(),
+		})
+		return
+	}
+
+	newProduct.ID = uuid.NewString()
+	for i := range newProduct.Stocks {
+		newProduct.Stocks[i].ID = uuid.NewString()
+		newProduct.Stocks[i].ProductID = newProduct.ID
+		newProduct.Stocks[i].WarehouseID = uuid.NewString()
+	}
+
+	err = db.MainDB.Create(&newProduct).Error
+	if err != nil {
+		log.Println(err)
+		ctx.JSON(500, gin.H{
+			"error":   true,
+			"message": err.Error(),
+		})
+		return
+	}
+
+	ctx.JSON(200, gin.H{
+		"error":   false,
+		"message": "success",
+		"data":    newProduct,
 	})
 }

@@ -15,4 +15,5 @@ func InitializeProductsRoutes(r *gin.Engine) {
 	})
 	r.GET("/products", controllers.GetProducts)
 	r.GET("/product/:id", controllers.GetProduct)
+	r.POST("/product", controllers.AddProduct)
 }
