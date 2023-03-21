@@ -13,8 +13,8 @@ func Seeder() {
 	products := []entity.Product{
 		{
 			ID:       prodID,
-			Name:     "Shampoo",
-			Category: "Perlalatan mandi",
+			Name:     "Head&Shoulder Cooling Menthol",
+			Category: "Shampoo",
 			Brand:    "Head&Shoulder",
 		},
 	}
